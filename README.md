@@ -26,25 +26,103 @@ There has:
 <h2>Different event</h2>
 <p>Add onchange event to Question1. when content of a form element have changed, the error message occur or not</p>
 <pre>
-document.forms[0][0].onchange = function(event) {};
+document.forms[0][0].onchange = function(event) {
+    userInput = document.forms['survey'][0];
+    errorMessage = document.getElementById("error0");
+    if (userInput.value.length < 2){
+    errorMessage.innerHTML = "At least two characters!";
+    userInput.style.background = "#BA324F";
+    } else {
+    errorMessage.innerHTML = "";
+    userInput.style.background = "transparent";
+    }
+};
 </pre>
 <P>Add onfocus event to Question2. when element gets focus, the error message occur or not</P>
 <pre>
-document.forms[0][1].onfocus = function(event) {};
+document.forms[0][1].onfocus = function(event) {
+    userInput = document.forms['survey'][1];
+    errorMessage = document.getElementById("error1");
+    if (userInput.value.length < 2){
+        errorMessage.innerHTML = "At least two characters!";
+        userInput.style.background = "#BA324F";
+    } else {
+        errorMessage.innerHTML = "";
+        userInput.style.background = "transparent";
+    }
+};
 </pre>
 <P>Add oninput event to Question3. when element gets user input, the error message occur or not</P>
 <pre>
-document.forms[0][2].oninput = function(event) {};
+document.forms[0][2].oninput = function(event) {
+    userInput = document.forms['survey'][2];
+    errorMessage = document.getElementById("error2");
+    if (isNaN(userInput.value)) {
+        errorMessage.innerHTML = "Must enter number!";
+        userInput.style.background = "#BA324F";
+    } else {
+        errorMessage.innerHTML = "";
+        userInput.style.background = "transparent";
+    }
+};
 </pre>
 <P>Add onblur event to Question4. when element loses focus, the error message occur or not</P>
 <pre>
-document.forms[0][3].onblur = function(event) {};
+document.forms[0][3].onblur = function(event) {
+    userInput = document.forms['survey'][3];
+    errorMessage = document.getElementById("error3");
+    if (userInput.value.length <= 0) {
+        errorMessage.innerHTML = "Don't leave blank!";
+        userInput.style.background = "#BA324F";
+    } else {
+        errorMessage.innerHTML = "";
+        userInput.style.background = "transparent";
+    }
+};
 </pre>
 <P>Add onmouseover event to Question6. when mouse is moved into the bounding box of element, the error message occur or not</P>
 <pre>
-document.getElementById("time").onmouseover = function(event){};
+document.getElementById("time").onmouseover = function(event){
+    errorMessage = document.getElementById("error5");
+    // array of elements that named times
+    var radios = document.getElementsByName("times");
+    // number of the cheched choice 
+    var checkedRadiosNumber = 0;
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked)
+            checkedRadiosNumber++;
+    }
+    if (checkedRadiosNumber < 1) {
+        errorMessage.innerHTML = "Must select one!";
+        errorMessage.style.color = "black";
+        document.getElementById("time").style.backgroundColor = "#BA324F";
+    } else {
+        errorMessage.innerHTML = "";
+        document.getElementById("time").style.backgroundColor = "transparent";
+        checkedRadiosNumber = 0;
+    }
+};
 </pre>
 <P>Add onmouseout event to Question7. when mouse is moved out of the bounding box of element, the error message occur or not</P>
 <pre>
-document.getElementById("store").onmouseout = function(event) {};
+document.getElementById("store").onmouseout = function(event) {
+    errorMessage = document.getElementById("error6");
+    // array of elements that named stores
+    var checkBox = document.getElementsByName("stores");
+    // number of the cheched choice
+    var checkedBoxNumber = 0;
+    for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].checked)
+            checkedBoxNumber++;
+    }
+    if (checkedBoxNumber < 2){
+        errorMessage.innerHTML = "Must select at least two!";
+        errorMessage.style.color = "black";
+        document.getElementById("store").style.backgroundColor = "#BA324F";
+    } else {
+        errorMessage.innerHTML = "";
+        document.getElementById("store").style.backgroundColor = "transparent";
+        checkedBoxNumber = 0;
+    }
+};
 </pre>
