@@ -1,80 +1,108 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Survey</title>
-<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+  <!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmetics Survey</title>
+
+  <!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Gudea|Satisfy" rel="stylesheet">
+
+  <!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/myStyle.css">
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
 </head>
 
 <body>
-	<script src="js/surveyAction.js"></script>
-	<div id="title"><img src="images/title.png"></div>
-	<form name="survey">
-		<table>
-			<tr>
-				<td>1. First Name: </td>
-				<td><input type="text" name="firstName" /></td>
-				<td class="error" id="error0"></td>
-			</tr>
-			<tr>
-				<td>2. Last Name: </td>
-				<td><input type="text" name="lastName" /></td>
-				<td class="error" id="error1"></td>
-			</tr>
-			<tr>
-				<td>3. Age: </td>
-				<td><input type="text" name="age" /></td>
-				<td class="error" id="error2"></td>
-			</tr>
-			<tr>
-				<td>4. Address: </td>
-				<td><input type="text" name="address" /></td>
-				<td class="error" id="error3"></td>
-			</tr>
-			<tr>
-				<td>5. Province: </td>
-				<td><select id="province">
-					<option value="no">--</option>
-					<option value="AB">AB</option>
-					<option value="BC">BC</option>
-					<option value="MB">MB</option>
-					<option value="NB">NB</option>
-					<option value="NL">NL</option>
-					<option value="NT">NT</option>
-					<option value="NS">NS</option>
-					<option value="NU">NU</option>
-					<option value="ON">ON</option>
-					<option value="PE">PE</option>
-					<option value="QC">QC</option>
-					<option value="SK">SK</option>
-					<option value="YT">YT</option>
-				</select></td>
-				<td class="error" id="error4"></td>
-			</tr>
-		</table>
-		<div id="time">
-			6. How often do you buy cosmetic products?<br>
-			<input type="radio" name="times" />Once a month <br>
-			<input type="radio" name="times" />2 times a mouth <br>
-			<input type="radio" name="times" />3 times a mouth <br>
-			<input type="radio" name="times" />4 times a mouth <br>
-			<input type="radio" name="times" />5 times a mouth <br>
-			<input type="radio" name="times" />More than 5 times a mouth <br>
-			<p class="error" id="error5"></p>
-		</div>
-		<div id="store">
-			7. Where do you tend to buy your cosmetic products? <br>
-			<input type="checkbox" name="stores" /> Super markets<br>
-			<input type="checkbox" name="stores" /> Department stores<br>
-			<input type="checkbox" name="stores" /> Internet<br>
-			<input type="checkbox" name="stores" /> Direct sales<br>
-			<input type="checkbox" name="stores" /> Specialist stores<br>
-			<input type="checkbox" name="stores" /> Drugstores<br>
-			<input type="checkbox" name="stores" /> Beauty Salons<br>
-			<p class="error" id="error6"></p>
-		</div>
-		<p id="error7"></p>
-		<input type="submit" id="submit" />
-	</form>
+  <div class="container">
+    <header role="banner">
+      <h1>Cosmetics Survey</h1>
+    </header>
+    <main role="main">
+      <form name="survey">
+        <ol>
+          <li>First Name:<input type="text" name="firstName" placeholder="Your first name"></li>
+          <p class="error" id="error0"></p>
+
+          <li>Last Name:<input type="text" name="lastName" placeholder="Your last name"></li>
+          <p class="error" id="error1"></p>
+
+          <li>Age:<input type="text" name="age" placeholder="Your age"></li>
+          <p class="error" id="error2"></p>
+
+          <li>Address:<input type="text" name="address" placeholder="Your address"></li>
+          <p class="error" id="error3"></p>
+
+          <li>Province:
+            <select id="province">
+						<option value="no">--</option>
+						<option value="AB">AB</option>
+						<option value="BC">BC</option>
+						<option value="MB">MB</option>
+						<option value="NB">NB</option>
+						<option value="NL">NL</option>
+						<option value="NT">NT</option>
+						<option value="NS">NS</option>
+						<option value="NU">NU</option>
+						<option value="ON">ON</option>
+						<option value="PE">PE</option>
+						<option value="QC">QC</option>
+						<option value="SK">SK</option>
+						<option value="YT">YT</option>
+					</select>
+          </li>
+          <p class="error" id="error4"></p>
+
+          <li>How often do you buy cosmetic products?
+            <ul class="sixth" id="time">
+              <li><input type="radio" id="radio1" name="times"><label for="radio1">every mouth</label></li>
+              <li><input type="radio" id="radio2" name="times"><label for="radio2">every three mouth</label></li>
+              <li><input type="radio" id="radio3" name="times"><label for="radio3">every half a year</label></li>
+              <li><input type="radio" id="radio4" name="times"><label for="radio4">every a year</label></li>
+              <li><input type="radio" id="radio5" name="times"><label for="radio5">never buy them</label></li>
+            </ul>
+          </li>
+          <p class="error" id="error5"></p>
+
+          <li>Where do you tend to buy your cosmetic products?
+            <ul class="seventh" id="store">
+              <li><input type="checkbox" id="checkbox1" name="stores"><label for="checkbox1">Super markets</label></li>
+              <li><input type="checkbox" id="checkbox2" name="stores"><label for="checkbox2">Department stores</label></li>
+              <li><input type="checkbox" id="checkbox3" name="stores"><label for="checkbox3">Internet</label></li>
+              <li><input type="checkbox" id="checkbox4" name="stores"><label for="checkbox4">Direct sales</label></li>
+              <li><input type="checkbox" id="checkbox5" name="stores"><label for="checkbox5">Specialist stores</label></li>
+              <li><input type="checkbox" id="checkbox6" name="stores"><label for="checkbox6">Drugstores</label></li>
+              <li><input type="checkbox" id="checkbox7" name="stores"><label for="checkbox7">Beauty Salons</label></li>
+            </ul>
+          </li>
+          <p class="error" id="error6"></p>
+        </ol>
+        <p id="error7"></p><input type="submit" id="submit">
+      </form>
+    </main>
+    <footer role="contentinfo">
+      <div>
+       <p class="email"><a href="mailto:lianxiao@sheridancollege.ca">lianxiao@sheridancollege.ca</a></p>
+        <ul class="social-icons">
+          <li><a href="https://www.linkedin.com/in/emerald-liang/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
+          <li><a href="https://github.com/lwrainbow/FormValidation1" target="_blank"><i class="fa fa-github fa-lg"></i></a></li>
+          <li><a href="https://www.instagram.com/lwrainbow/?hl=en" target="_blank"><i class="fa fa-instagram fa-lg"></i></a></li>
+        </ul>
+      </div>
+      <p>&copy; 2017 by Xiaoyu Liang</p>
+    </footer>
+  </div>
+  <script src="js/surveyAction.js"></script>
 </body>
+
 </html>
