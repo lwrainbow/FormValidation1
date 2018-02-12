@@ -1,6 +1,6 @@
 # Form Validation 1
 <p>Create and validate a form in JavaScript without submitting it to a server while experimenting with different events.</p>
-<p><a href="http://lianxiao.dev.fast.sheridanc.on.ca/xiaoyu/FormValidation1/index.html">See it</a></p>
+<p><a href="http://lianxiao.dev.fast.sheridanc.on.ca/xiaoyu/FormValidation1/index.html">Demo</a></p>
 There has:
 <ul>
   <li>A css file which contains all of my style code</li>
