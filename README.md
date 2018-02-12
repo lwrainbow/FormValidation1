@@ -3,8 +3,8 @@
 <p><a href="http://lianxiao.dev.fast.sheridanc.on.ca/xiaoyu/FormValidation1/index.html">Demo</a></p>
 There has:
 <ul>
+  <li>A html file that the user will interact with</li>
   <li>A css file which contains all of my style code</li>
-  <li>An html file that the user will interact with</li>
   <li>A js file that contains my javascript code</li>
 </ul>
 
