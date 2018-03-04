@@ -94,6 +94,10 @@ form {
   margin: 0 auto 2%;
 }
 
+ol {
+  list-style: none;
+}
+
 ol li {
   padding: 4px 10px;
 }

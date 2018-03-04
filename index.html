@@ -2,52 +2,52 @@
 <html lang="en">
 
 <head>
-  <!-- Basic Page Needs
+	<!-- Basic Page Needs
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="UTF-8">
-  <title>Cosmetics Survey</title>
+	<meta charset="UTF-8">
+	<title>Cosmetics Survey</title>
 
-  <!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Script
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  <script src="https://use.fontawesome.com/a24ec16c20.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
+	<!-- Script
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css?family=Gudea|Satisfy" rel="stylesheet">
-  <script src="https://use.fontawesome.com/a24ec16c20.js"></script>
+	<script src="https://use.fontawesome.com/a24ec16c20.js"></script>
 
-  <!-- CSS
+	<!-- FONT
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/myStyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Gudea|Satisfy" rel="stylesheet">
+	<script src="https://use.fontawesome.com/a24ec16c20.js"></script>
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/myStyle.css">
 
 </head>
 
 <body>
-  <div class="container">
-    <header role="banner">
-      <h1>Cosmetics Survey</h1>
-    </header>
-    <main role="main">
-      <form name="survey">
-        <ol>
-          <li>First Name:<input type="text" name="firstName" placeholder="Your first name"></li>
-          <p class="error" id="error0"></p>
+	<div class="container">
+		<header role="banner">
+			<h1>Cosmetics Survey</h1>
+		</header>
+		<main role="main">
+			<form name="survey">
+				<ol>
+					<li>First Name:<input type="text" name="firstName" placeholder="Your first name"></li>
+					<p class="error" id="error0"></p>
 
-          <li>Last Name:<input type="text" name="lastName" placeholder="Your last name"></li>
-          <p class="error" id="error1"></p>
+					<li>Last Name:<input type="text" name="lastName" placeholder="Your last name"></li>
+					<p class="error" id="error1"></p>
 
-          <li>Age:<input type="text" name="age" placeholder="Your age"></li>
-          <p class="error" id="error2"></p>
+					<li>Age:<input type="text" name="age" placeholder="Your age"></li>
+					<p class="error" id="error2"></p>
 
-          <li>Address:<input type="text" name="address" placeholder="Your address"></li>
-          <p class="error" id="error3"></p>
+					<li>Address:<input type="text" name="address" placeholder="Your address"></li>
+					<p class="error" id="error3"></p>
 
-          <li>Province:
-            <select id="province">
+					<li>Province:
+						<select id="province">
 						<option value="no">--</option>
 						<option value="AB">AB</option>
 						<option value="BC">BC</option>
@@ -63,49 +63,50 @@
 						<option value="SK">SK</option>
 						<option value="YT">YT</option>
 					</select>
-          </li>
-          <p class="error" id="error4"></p>
+					</li>
+					<p class="error" id="error4"></p>
 
-          <li>How often do you buy cosmetic products?
-            <ul class="sixth" id="time">
-              <li><input type="radio" id="radio1" name="times"><label for="radio1">More than 4 times a month</label></li>
-              <li><input type="radio" id="radio2" name="times"><label for="radio2">4 times a month</label></li>
-              <li><input type="radio" id="radio3" name="times"><label for="radio3">3 times a month</label></li>
-              <li><input type="radio" id="radio4" name="times"><label for="radio4">2 times a month</label></li>
-              <li><input type="radio" id="radio5" name="times"><label for="radio5">once times a month</label></li>
-            </ul>
-          </li>
-          <p class="error" id="error5"></p>
+					<li>How often do you buy cosmetic products?
+						<ul class="sixth" id="time">
+							<li><input type="radio" id="radio1" name="times"><label for="radio1">More than 4 times a month</label></li>
+							<li><input type="radio" id="radio2" name="times"><label for="radio2">4 times a month</label></li>
+							<li><input type="radio" id="radio3" name="times"><label for="radio3">3 times a month</label></li>
+							<li><input type="radio" id="radio4" name="times"><label for="radio4">2 times a month</label></li>
+							<li><input type="radio" id="radio5" name="times"><label for="radio5">once times a month</label></li>
+						</ul>
+					</li>
+					<p class="error" id="error5"></p>
 
-          <li>Where do you tend to buy your cosmetic products?
-            <ul class="seventh" id="store">
-              <li><input type="checkbox" id="checkbox1" name="stores"><label for="checkbox1">Super markets</label></li>
-              <li><input type="checkbox" id="checkbox2" name="stores"><label for="checkbox2">Department stores</label></li>
-              <li><input type="checkbox" id="checkbox3" name="stores"><label for="checkbox3">Internet</label></li>
-              <li><input type="checkbox" id="checkbox4" name="stores"><label for="checkbox4">Direct sales</label></li>
-              <li><input type="checkbox" id="checkbox5" name="stores"><label for="checkbox5">Specialist stores</label></li>
-              <li><input type="checkbox" id="checkbox6" name="stores"><label for="checkbox6">Drugstores</label></li>
-              <li><input type="checkbox" id="checkbox7" name="stores"><label for="checkbox7">Beauty Salons</label></li>
-            </ul>
-          </li>
-          <p class="error" id="error6"></p>
-        </ol>
-        <p id="error7"></p><input type="submit" id="submit">
-      </form>
-    </main>
-    <footer role="contentinfo">
-      <div>
-       <p class="email"><a href="mailto:emerald.xiaoyuliang@gmail.com">emerald.xiaoyuliang@gmail.com</a></p>
-        <ul class="social-icons">
-          <li><a href="https://www.linkedin.com/in/emerald-liang/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">Linkedin</span></a></li>
-          <li><a href="https://github.com/lwrainbow/FormValidation1" target="_blank"><i class="fa fa-github" aria-hidden="true"></i><span class="sr-only">Github</span></a></li>
-          <li><a href="https://www.instagram.com/lwrainbow/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
-        </ul>
-      </div>
-      <p>&copy; 2017 by Xiaoyu</p>
-    </footer>
-  </div>
-  <script src="js/surveyAction.js"></script>
+					<li>Where do you tend to buy your cosmetic products?
+						<ul class="seventh" id="store">
+							<li><input type="checkbox" id="checkbox1" name="stores"><label for="checkbox1">Super markets</label></li>
+							<li><input type="checkbox" id="checkbox2" name="stores"><label for="checkbox2">Department stores</label></li>
+							<li><input type="checkbox" id="checkbox3" name="stores"><label for="checkbox3">Internet</label></li>
+							<li><input type="checkbox" id="checkbox4" name="stores"><label for="checkbox4">Direct sales</label></li>
+							<li><input type="checkbox" id="checkbox5" name="stores"><label for="checkbox5">Specialist stores</label></li>
+							<li><input type="checkbox" id="checkbox6" name="stores"><label for="checkbox6">Drugstores</label></li>
+							<li><input type="checkbox" id="checkbox7" name="stores"><label for="checkbox7">Beauty Salons</label></li>
+						</ul>
+					</li>
+					<p class="error" id="error6"></p>
+				</ol>
+				<p id="error7"></p><input type="submit" id="submit">
+			</form>
+		</main>
+		<footer role="contentinfo">
+			<div>
+<!--				<p class="email"><a href="mailto:emerald.xiaoyuliang@gmail.com">emerald.xiaoyuliang@gmail.com</a></p>-->
+				<ul class="social-icons">
+					<li><a href="http://lianxiao.dev.fast.sheridanc.on.ca/xiaoyu/" target="_blank"><i class="fa fa-home" aria-hidden="true"></i><span class="sr-only">Website</span></a></li>
+					<li><a href="https://www.linkedin.com/in/emerald-liang/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">Linkedin</span></a></li>
+					<li><a href="https://github.com/lwrainbow/FormValidation1" target="_blank"><i class="fa fa-github" aria-hidden="true"></i><span class="sr-only">Github</span></a></li>
+					<li><a href="https://www.instagram.com/lwrainbow/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+				</ul>
+			</div>
+			<p>&copy; 2017 by Xiaoyu</p>
+		</footer>
+	</div>
+	<script src="js/surveyAction.js"></script>
 </body>
 
 </html>
